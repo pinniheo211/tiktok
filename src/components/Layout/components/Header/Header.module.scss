@@ -1,0 +1,116 @@
+.wrapper{
+    --search-height:46px;
+    --search-top-spacer:9px;
+    height:var(--default-layout-header-height,60px);
+    width: 100%;
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    display:flex;
+    justify-content: center;
+}
+
+.inner{
+    height:100%;
+    width: var(--default-layout-width , 1150px);
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:0 var(--default-layout-horizon-spacer);
+}
+
+.search , .search-result{
+    width: 361px;
+}
+
+.search-title{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color:rgba(22,24,35,0.5);
+}
+
+.search{
+    padding-left: 16px;
+    width: 361px;
+    height: var(--search-height);
+    border-radius: 92px;
+    background-color:rgba(22,24,35,0.06);
+    position: relative;
+    display:flex;
+    position: relative;
+    border: 1.5px solid transparent;
+    input{
+        height: 100%;
+        color:var(--black);
+        font-size: 1.6rem;
+        border:none;
+        background-color:transparent;
+        flex:1;
+        outline:none;
+    }
+    &::after{
+        content:'';
+        position:absolute;
+        top: var(--search-top-spacer) ;
+        right: 52px;
+        width:1px;
+        height: calc(var(--search-height) - var(--search-top-spacer) * 2);
+        background-color:rgba(22,24,35,0.12);
+    }
+    &:focus-within{
+        border-color:  rgba(22,24,35,0.2);
+    }
+}
+
+
+
+
+ 
+.search-btn {
+    width: 52px;
+    height: 100%;
+    border:none;
+    outline:none;
+    border-top-right-radius: 92px;
+    border-bottom-right-radius: 92px;
+    font-size: 1.8rem;
+    color:rgba(22,24,35,0.34);
+
+    &:hover{
+        background-color: rgba(22,24,35,0.03);
+    }
+}
+
+.clear{
+    border:none;
+    outline:none;
+}
+
+//actions
+
+.actions{
+    display:flex;
+    align-items: center;
+}
+
+.more{
+    margin-left: 28px;
+    background-color: transparent;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.action-btn{
+    font-size:1.5rem;
+    color: #161823;
+    background-color: transparent;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+.user-avatar{
+    width:32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 12px;
+    cursor: pointer;
+}
